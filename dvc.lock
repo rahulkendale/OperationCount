@@ -1,0 +1,18 @@
+schema: '2.0'
+stages:
+  load_data:
+    cmd: python src/load_data.py --config=parameters.yaml
+    deps:
+    - path: data_given/Count.csv
+      md5: 201fac760efe5c7e550f1b6341091686
+      size: 1603
+    - path: src/get_data.py
+      md5: 30875ad22da1d568dab7afca423a3896
+      size: 662
+    - path: src/load_data.py
+      md5: 0c9b283fd9aa26c5dbe01191a14feba8
+      size: 557
+    outs:
+    - path: data/raw/Count.csv
+      md5: 201fac760efe5c7e550f1b6341091686
+      size: 1603

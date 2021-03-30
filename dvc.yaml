@@ -1,1 +1,9 @@
-stags:
+stages:
+  load_data:
+    cmd: python src/load_data.py --config=parameters.yaml
+    deps:
+      - src/get_data.py
+      - src/load_data.py
+      - data_given/Count.csv
+    outs:
+      - data/raw/Count.csv
