@@ -1,17 +1,17 @@
 base:
   project: operationcount-multivariate-timeseries
-  target-col: TARGET
+  target_col: TARGET
 
 data_source:
   azblob_source: data_given/Count.csv
 
 load_data:
-  ra_dataset_csv: data/raw/Count.csv
+  raw_dataset_csv: data/raw/Count.csv
 
 split_data:
-  train_path: data/processed/train_count.csv
-  test_path: data/processed/test_count.csv
-  test_size: 0.2
+  train_path: data/process/train_count.csv
+  test_path: data/process/test_count.csv
+  train_size: 0.8
 
 estimator:
   VAR:

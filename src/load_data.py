@@ -7,7 +7,7 @@ import argparse
 def loan_and_save(config_path):
     config = read_params(config_path)
     df = get_data(config_path)
-    raw_data_apth = config["load_data"]["ra_dataset_csv"]
+    raw_data_apth = config["load_data"]["raw_dataset_csv"]
     df.to_csv(raw_data_apth,index=False)
 
 if __name__=="__main__":

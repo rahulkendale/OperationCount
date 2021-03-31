@@ -7,3 +7,12 @@ stages:
       - data_given/Count.csv
     outs:
       - data/raw/Count.csv
+
+  split_data:
+    cmd: python src/split_data.py --config=parameters.yaml
+    deps:
+      - src/split_data.py
+      - data/raw/Count.csv
+    outs:
+      - data/process/train_count.csv
+      - data/process/test_count.csv
